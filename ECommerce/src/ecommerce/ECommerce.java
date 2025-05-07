@@ -34,73 +34,74 @@ public class ECommerce {
 
         Scanner scelta = new Scanner(System.in);
         int h = 0;
-       
-        while(h == 0){
-             menu();
-        switch (scelta.nextLine()) {
-            case "1":
-                /*   System.out.println(DVD.getNome()+" "+ DVD.getCategoria()+" "+ DVD.getPrezzo()+"€");
+
+        while (h == 0) {
+            menu();
+            switch (scelta.nextLine()) {
+                case "1":
+                    /*   System.out.println(DVD.getNome()+" "+ DVD.getCategoria()+" "+ DVD.getPrezzo()+"€");
                 System.out.println(CELLULARE.getNome()+" "+ CELLULARE.getCategoria()+" "+ CELLULARE.getPrezzo()+"€");
                 System.out.println(MAGLIETTA.getNome()+" "+ MAGLIETTA.getCategoria()+" "+ MAGLIETTA.getPrezzo()+"€");
                 System.out.println(SCARPE.getNome()+" "+ SCARPE.getCategoria()+" "+ SCARPE.getPrezzo()+"€");
-                 */
-                for (int i = 0; i < prodotti.size(); i++) {
-                    System.out.print(prodotti.get(i).getNome() + " ");
-                    System.out.print(prodotti.get(i).getCategoria() + " ");
-                    System.out.print(prodotti.get(i).getPrezzo() + "€");
-                    System.out.println();
-                }
-                break;
-            case "2":
-                int c = 0;
-                while (c == 0) {
-
-                    System.out.println("quale prodotto desideri aggiungere?");
-
-                    for (int i = 0; i < 4; i++) {
+                     */
+                    for (int i = 0; i < prodotti.size(); i++) {
                         System.out.print(prodotti.get(i).getNome() + " ");
                         System.out.print(prodotti.get(i).getCategoria() + " ");
                         System.out.print(prodotti.get(i).getPrezzo() + "€");
                         System.out.println();
-
                     }
-                    if (c == 0) {
-                        String input = scelta.nextLine();
-                        for (Prodotto i : prodotti) {
-                            if (i.getNome() == input) {
-                                carrello.add(i);
+                    break;
+                case "2":
+                    int c = 0;
+                    while (c == 0) {
+
+                        System.out.println("quale prodotto desideri aggiungere?");
+
+                        for (int i = 0; i < 4; i++) {
+                            System.out.print(prodotti.get(i).getNome() + " ");
+                            System.out.print(prodotti.get(i).getCategoria() + " ");
+                            System.out.print(prodotti.get(i).getPrezzo() + "€");
+                            System.out.println();
+
+                        }
+                        if (c == 0) {
+                            String input = scelta.nextLine();
+                            for (Prodotto i : prodotti) {
+                                if (i.getNome() == input) {
+                                    carrello.add(i);
+                                }
+
                             }
 
                         }
+                        System.out.println("vuoi acquistare altro? si o no");
+                        String replay = scelta.nextLine();
+                        if (replay == "si") {
+                            c = 0;
+                        } else {
+                            c = 1;
+                        }
 
                     }
-                    System.out.println("vuoi acquistare altro? si o no");
-                    String replay = scelta.nextLine();
-                    if (replay == "si") {
-                        c = 0;
-                    } else {
-                        c = 1;
+                    if (c == 1) {
+                        break;
                     }
 
-                }
-                if (c == 1) {
+                case "3":
+
                     break;
-                }
 
-            case "3":
-
-                break;
-            case "4":
-                for (int i = 0; i < carrello.size(); i++) {
-                    System.out.print(carrello.get(i).getNome() + " ");
-                    System.out.print(carrello.get(i).getCategoria() + " ");
-                    System.out.print(carrello.get(i).getPrezzo() + "€");
-                    System.out.println();
-                }
-                break;
-            case "5":
-                return;
-        }
+                case "4":
+                    for (int i = 0; i < carrello.size(); i++) {
+                        System.out.print(carrello.get(i).getNome() + " ");
+                        System.out.print(carrello.get(i).getCategoria() + " ");
+                        System.out.print(carrello.get(i).getPrezzo() + "€");
+                        System.out.println();
+                    }
+                    break;
+                case "5":
+                    return;
+            }
         }
 
     }
@@ -112,5 +113,6 @@ public class ECommerce {
         System.out.println("2. AGGIUNGI PRODOTTI AL CARELLO");
         System.out.println("3. RICERCA PRODOTTI PER CATEGORIA");
         System.out.println("4. STAMPA CONTENUTO CARRELLO");
+        System.out.println("5. CHIUDI PROGRAMMA");
     }
 }
