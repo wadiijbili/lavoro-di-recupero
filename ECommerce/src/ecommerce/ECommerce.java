@@ -5,8 +5,13 @@
  */
 package ecommerce;
 
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -14,11 +19,37 @@ import java.util.Scanner;
  */
 public class ECommerce {
 
-    /**
-     * @param args the command line arguments
-     */
+    public ECommerce(){
+        JFrame frame = new JFrame(); //crea la finestra
+        
+        JPanel panel = new JPanel();
+        panel.setBorder(BorderFactory.createEmptyBorder(300, 300, 100, 300));
+        panel.setLayout(new GridLayout(0, 1));
+        
+        frame.add(panel, BorderLayout.CENTER);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("ECommerce");
+        frame.pack();
+        frame.setVisible(true);
+    }
+    
+    
     public static void main(String[] args) {
         // TODO code application logic here
+        
+         new ECommerce();
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
         ArrayList<Prodotto> carrello = new ArrayList();
         ArrayList<Prodotto> prodotti = new ArrayList();
         Prodotto dvd = new Prodotto("dvd", "eletronica", 15);
@@ -39,11 +70,11 @@ public class ECommerce {
             menu();
             switch (scelta.nextLine()) {
                 case "1":
-                    /*   System.out.println(DVD.getNome()+" "+ DVD.getCategoria()+" "+ DVD.getPrezzo()+"€");
-                System.out.println(CELLULARE.getNome()+" "+ CELLULARE.getCategoria()+" "+ CELLULARE.getPrezzo()+"€");
-                System.out.println(MAGLIETTA.getNome()+" "+ MAGLIETTA.getCategoria()+" "+ MAGLIETTA.getPrezzo()+"€");
-                System.out.println(SCARPE.getNome()+" "+ SCARPE.getCategoria()+" "+ SCARPE.getPrezzo()+"€");
-                     */
+                    //  System.out.println(DVD.getNome()+" "+ DVD.getCategoria()+" "+ DVD.getPrezzo()+"€");
+              //    System.out.println(CELLULARE.getNome()+" "+ CELLULARE.getCategoria()+" "+ CELLULARE.getPrezzo()+"€");
+             //     System.out.println(MAGLIETTA.getNome()+" "+ MAGLIETTA.getCategoria()+" "+ MAGLIETTA.getPrezzo()+"€");
+            //      System.out.println(SCARPE.getNome()+" "+ SCARPE.getCategoria()+" "+ SCARPE.getPrezzo()+"€");
+                     
                     for (int i = 0; i < prodotti.size(); i++) {
                         System.out.print(prodotti.get(i).getNome() + " ");
                         System.out.print(prodotti.get(i).getCategoria() + " ");
@@ -125,4 +156,6 @@ public class ECommerce {
         System.out.println("4. STAMPA CONTENUTO CARRELLO");
         System.out.println("5. CHIUDI PROGRAMMA");
     }
+ */
+}
 }
