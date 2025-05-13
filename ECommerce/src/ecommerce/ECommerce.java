@@ -24,7 +24,7 @@ public class ECommerce {
         
         JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(300, 300, 100, 300));
-        panel.setLayout(new GridLayout(0, 1));
+        panel.setLayout(new GridLayout(10, 10));
         
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
