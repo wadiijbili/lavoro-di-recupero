@@ -30,7 +30,7 @@ public class ECommerce {
         prodotti.add(scarpe);
         prodotti.add(cellulare);
         prodotti.add(maglietta);
-        carrello.add(dvd);
+        
 
         Scanner scelta = new Scanner(System.in);
         int h = 0;
@@ -64,19 +64,19 @@ public class ECommerce {
                             System.out.println();
 
                         }
-                        if (c == 0) {
+                        
                             String input = scelta.nextLine();
                             for (Prodotto i : prodotti) {
-                                if (i.getNome() == input) {
+                                if (i.getNome().equals(input)) {
                                     carrello.add(i);
                                 }
 
                             }
 
-                        }
+                        
                         System.out.println("vuoi acquistare altro? si o no");
                         String replay = scelta.nextLine();
-                        if (replay == "si") {
+                        if ("si".equals(replay)) {
                             c = 0;
                         } else {
                             c = 1;
@@ -88,6 +88,16 @@ public class ECommerce {
                     }
 
                 case "3":
+                    System.out.println("in base a quale categoria vuole ricercare i prodotti??");
+                    Scanner ricerca = new Scanner(System.in);
+                    String cate = ricerca.nextLine();
+                    System.out.println("i prodotti appartenenti alla categoria "+cate+" sono :");
+                    for (Prodotto i : prodotti) {
+                                if (i.getCategoria().equals(cate)) {
+                                    System.out.println(i.getNome() +" "+ i.getPrezzo()+ "€");
+                                }
+
+                            }
 
                     break;
 
