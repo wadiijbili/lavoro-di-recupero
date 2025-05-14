@@ -19,8 +19,12 @@ import java.util.List;
  *
  * @author alunno
  */
-public class Gestione {
+public class Gestione extends Prodotto{
      File file = new File("tabella.csv");
+
+    public Gestione(String nome, String categoria, float prezzo) {
+        super(nome, categoria, prezzo);
+    }
      
      public ArrayList<String> ARL() throws FileNotFoundException, IOException{
          ArrayList<String> arr = new ArrayList<>();
