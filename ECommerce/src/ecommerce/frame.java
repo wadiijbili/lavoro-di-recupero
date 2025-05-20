@@ -33,7 +33,7 @@ public class frame extends JFrame {
 
         JFrame pagina = new JFrame("PAGINA E COMMERCE");
         
-        add(area, BorderLayout.PAGE_START);
+        
 
         add(p1, BorderLayout.PAGE_START);
         p1.addActionListener(new ActionListener() {
@@ -44,7 +44,8 @@ public class frame extends JFrame {
 
             }
         });
-
+        
+        
         add(p2, BorderLayout.WEST);
         add(p3, BorderLayout.CENTER);
         add(p4, BorderLayout.EAST);
