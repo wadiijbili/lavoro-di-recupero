@@ -5,17 +5,9 @@
  */
 package ecommerce;
 
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 /**
  *
@@ -23,45 +15,14 @@ import javax.swing.JPanel;
  */
 public class ECommerce {
 
-    public ECommerce() {
-        /*   JFrame frame = new JFrame(); //crea la finestra
-        
-        JPanel panel = new JPanel();
-        panel.setBorder(BorderFactory.createEmptyBorder(300, 300, 100, 300));
-        panel.setLayout(new GridLayout(10, 10));
-        
-        frame.add(panel, BorderLayout.CENTER);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("ECommerce");
-        frame.pack();
-        frame.setVisible(true);
-        
-        JButton pulsante = new JButton();
-        
-        pulsante.setBounds(200,100,100,50);
-        
-         */
-
-    }
+ 
 
     public static void main(String[] args) {
         // TODO code application logic here
-new Frame();
-        JFrame frame = new JFrame(); //crea la finestra
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 400);
-        frame.setLocationRelativeTo(null);
 
-        JPanel panel = new JPanel();
-        JPanel panel2 = new JPanel();
-        JPanel panel3 = new JPanel();
-        JButton pulsante = new JButton();
-        JButton pulsante2 = new JButton();
-        JLabel label = new JLabel();
-        
-        pulsante.setText("START");
+        new frame();
 
-        /*
+       /*
         ArrayList<Prodotto> carrello = new ArrayList();
         ArrayList<Prodotto> prodotti = new ArrayList();
         Prodotto dvd = new Prodotto("dvd", "eletronica", 15);
@@ -168,6 +129,7 @@ new Frame();
         System.out.println("4. STAMPA CONTENUTO CARRELLO");
         System.out.println("5. CHIUDI PROGRAMMA");
     }
-         */
-    }
+*/
+      
+}
 }
